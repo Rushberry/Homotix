@@ -1,0 +1,76 @@
+@import url(https://db.onlinewebfonts.com/c/de7e9d2edeeb91aeb3199b82dd5750b3?family=Ara+Hamah+1982);
+@import url('https://fonts.cdnfonts.com/css/brittany-signature');
+@import url(https://db.onlinewebfonts.com/c/590d26872afc308d02689176a1985e6c?family=Kare+W01+Regular);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
+
+body{
+  position: relative;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.arabic{
+  font-family: ;
+  font-weight: none;
+  font-size: 40px;
+  color: #4caf50;
+  font-weight: normal;
+  top: 100px;
+  margin-bottom: 0px;
+}
+
+.Salam{
+  margin-top: 0px;
+  font-size: 23.5px;
+  font-weight: bold;
+}
+
+.container{
+  margin-top: 36%;
+}
+
+.welcome{
+  font-size: 47.9px;
+  font-family: 'Brittany Signature', sans-serif;
+  margin-bottom: 0px;
+  font-weight: none;                                        
+}
+
+.homo{
+  color: #4caf50;
+  margin-top: -10px;
+  font-family: "Kare W01 Regular";
+  font-size: 58.6px;
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+}
+
+.powered{
+  font-size: 20.5px;
+}
+
+.pathy{
+  color: #4caf50;
+}
+
+.ltd{
+  font-size: 18.7px;
+  color: #b2b5c5;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+button{
+  background-color: #4caf50;
+  border: none;
+  border-radius: 55px;
+  height: 50px;
+  Width: 300px;
+  margin-top: 56%;
+}
