@@ -5,57 +5,33 @@
 
 body{
   position: relative;
-  text-align: center;
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
 }
 
-.arabic{
-  font-weight: none;
-  font-size: 100px;
-  color: #4caf50;
-  font-weight: normal;
-  top: 100px;
-  margin-bottom: 0px;
-}
-
-.Salam{
-  margin-top: 0px;
-  font-size: 50px;
-  font-weight: bold;
-}
 
 .container{
-  margin-top: 56%;
+  margin-top: 100px;
 }
 
-.welcome{
-  font-size: 150px;
-  font-family: 'Brittany Signature', sans-serif;
-  margin-bottom: 0px;
-  font-weight: none;                                        
-}
 
 .homo{
   color: #4caf50;
   margin-top: -40px;
   font-family: "Kare W01 Regular";
-  font-size: 150px;
+  font-size: 170px;
   letter-spacing: 1px;
   margin-bottom: -15px;
 }
 
 .powered{
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .pathy{
   color: #4caf50;
 }
 
-.ltd{
-  font-size: 40px;
-  color: #b2b5c5;
-}
 
 a{
   color: white;
@@ -73,4 +49,9 @@ button{
   Width: 850px;
   margin-top: 65%;
   margin-bottom: 0px;
+}
+
+.benefits{
+    font-size: 140px;
+    font-weight: bolder;
 }
