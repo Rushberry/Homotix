@@ -54,4 +54,19 @@ button{
 .benefits{
     font-size: 140px;
     font-weight: bolder;
+    text-align: left;
+    margin-left: 70px;
+    margin-top: -10px;
+}
+
+.para{
+    font-size: 40px;
+    text-align: left;
+    margin-top: -80px;
+    margin-left: 70px;
+    width: 5px;
+}
+
+.boldp{
+    font-weight: bold;
 }
