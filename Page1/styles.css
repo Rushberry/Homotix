@@ -10,9 +10,8 @@ body{
 }
 
 .arabic{
-  font-family: ;
   font-weight: none;
-  font-size: 40px;
+  font-size: 90px;
   color: #4caf50;
   font-weight: normal;
   top: 100px;
@@ -21,16 +20,16 @@ body{
 
 .Salam{
   margin-top: 0px;
-  font-size: 23.5px;
+  font-size: 50px;
   font-weight: bold;
 }
 
 .container{
-  margin-top: 36%;
+  margin-top: 56%;
 }
 
 .welcome{
-  font-size: 47.9px;
+  font-size: 150px;
   font-family: 'Brittany Signature', sans-serif;
   margin-bottom: 0px;
   font-weight: none;                                        
@@ -38,9 +37,9 @@ body{
 
 .homo{
   color: #4caf50;
-  margin-top: 15px;
+  margin-top: -40px;
   font-family: "Kare W01 Regular";
-  font-size: 58.6px;
+  font-size: 150px;
   letter-spacing: 1px;
   margin-bottom: -15px;
 }
@@ -61,7 +60,7 @@ body{
 a{
   color: white;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 50px;
   font-family: "Montserrat";
   font-weight: bold;
 }
@@ -69,8 +68,9 @@ a{
 button{
   background-color: #4caf50;
   border: none;
-  border-radius: 55px;
-  height: 50px;
-  Width: 300px;
-  margin-top: 56%;
+  border-radius: 90px;
+  height: 150px;
+  Width: 850px;
+  margin-top: 70%;
+  margin-bottom: 0px;
 }
