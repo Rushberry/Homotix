@@ -1,0 +1,59 @@
+<form name="Registration Form (Homotix)" id="registration">
+    <input type="text" name="Full Name" placeholder="Full Name" oninput="capitalizeFirstLetter(this)" required>
+    <input type="text" name="Mobile Number (+880)" placeholder="Mobile Number (+880)" pattern="[0-9]{11}" maxlength="11" oninput="validateMobileNumber(this)" required>
+    <input type="text" name="Education Qualification (BHMS/DHMS)" placeholder="Education Qualification (BHMS/DHMS)" oninput="validateEducation(this)" required>
+    <button type="button" id="send" onclick="submitForm()">Send </button>
+</form>
+
+<script>
+    function capitalizeFirstLetter(input) {
+        input.value = input.value.charAt(0).toUpperCase() + input.value.slice(1);
+    }
+
+    function validateEducation(input) {
+        const validValues = ['BHMS', 'DHMS'];
+        const inputValue = input.value.toUpperCase();
+
+        if (!validValues.includes(inputValue)) {
+            input.setCustomValidity("Please enter 'BHMS' or 'DHMS'");
+        } else {
+            input.setCustomValidity("");
+        }
+    }
+
+    function validateMobileNumber(input) {
+        const inputValue = input.value;
+
+        if (inputValue.length !== 11 || !inputValue.startsWith('01')) {
+            input.setCustomValidity("Mobile Number must start with '01' and be 11 digits");
+        } else {
+            input.setCustomValidity("");
+        }
+    }
+
+    function submitForm() {
+        const form = document.getElementById("registration");
+        const formData = new FormData(form);
+
+        fetch("https://script.google.com/macros/s/AKfycbz464FDDrRjvGSTSPLALd8NWmkitdin3bWN7d5KuJk1YiVw8KMbTgKLjLKQi827bqps/exec", {
+            method: "POST",
+            body: formData,
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            console.log("Response:", response);
+            return response.text();
+        })
+        .then(data => {
+            console.log("Form submitted successfully:", data);
+            window.location.href = "https://www.google.com";
+        })
+        .catch(error => {
+            console.error("There was a problem with the form submission:", error);
+            // Handle error appropriately, e.g., display an error message
+            alert("Form submission failed. Please try again.");
+        });
+    }
+</script>
