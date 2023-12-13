@@ -1,10 +1,8 @@
-<form name="Registration Form (Homotix)" id="registration">
+<form method="POST" action="https://script.google.com/macros/s/AKfycbz464FDDrRjvGSTSPLALd8NWmkitdin3bWN7d5KuJk1YiVw8KMbTgKLjLKQi827bqps/exec" name="Registration Form (Homotix)" id="registration">
     <input type="text" name="Full Name" placeholder="Full Name" oninput="capitalizeFirstLetter(this)" required>
     <input type="text" name="Mobile Number (+880)" placeholder="Mobile Number (+880)" pattern="[0-9]{11}" maxlength="11" oninput="validateMobileNumber(this)" required>
     <input type="text" name="Education Qualification (BHMS/DHMS)" placeholder="Education Qualification (BHMS/DHMS)" oninput="validateEducation(this)" required>
-    <button type="button" id="send" onclick="submitForm()">Send </button>
-</form>
-
+    <button type="submit" id="send">Send </button>
 <script>
     function capitalizeFirstLetter(input) {
         input.value = input.value.charAt(0).toUpperCase() + input.value.slice(1);
@@ -31,29 +29,38 @@
         }
     }
 
-    function submitForm() {
-        const form = document.getElementById("registration");
-        const formData = new FormData(form);
+    document.getElementById("registration").addEventListener("submit", function (event) {
+        event.preventDefault();
 
-        fetch("https://script.google.com/macros/s/AKfycbz464FDDrRjvGSTSPLALd8NWmkitdin3bWN7d5KuJk1YiVw8KMbTgKLjLKQi827bqps/exec", {
-            method: "POST",
-            body: formData,
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
-            console.log("Response:", response);
-            return response.text();
-        })
-        .then(data => {
-            console.log("Form submitted successfully:", data);
-            window.location.href = "https://www.google.com";
-        })
-        .catch(error => {
-            console.error("There was a problem with the form submission:", error);
-            // Handle error appropriately, e.g., display an error message
-            alert("Form submission failed. Please try again.");
-        });
-    }
+        const form = event.target;
+
+        const educationInput = form.querySelector("[name='Education Qualification (BHMS/DHMS)']");
+        const mobileNumberInput = form.querySelector("[name='Mobile Number (+880)']");
+
+        validateEducation(educationInput);
+        validateMobileNumber(mobileNumberInput);
+
+        if (form.checkValidity()) {
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result === "success") {
+                        window.location.href = "https://www.google.com";
+                    } else {
+                        alert("Submission failed. Please check your data and try again.");
+                        form.reset(); 
+                    }
+                })
+                .catch(error => {
+                    console.error("Error during form submission:", error);
+                    alert("An error occurred. Please try again later.");
+                });
+        }
+    });
 </script>
+</form>
