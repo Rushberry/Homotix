@@ -39,7 +39,7 @@ button{
   border-radius: 90px;
   height: 150px;
   Width: 850px;
-  margin-top: 5.5%;
+  margin-top: 23.5%;
   margin-bottom: 0px;
   color: white;
   text-decoration: none;
@@ -75,21 +75,4 @@ button{
 
 .space{
     margin-top: 10px;
-}
-
-.check {
-  width: 42px;
-  height: 42px;
-  accent-color: #4caf50;
-  margin-top: 56px;
-  margin-right: 20px;
-}
-
-.colour-l {
-  color: #4caf50;
-}
-
-.margin-m {
-  position: absolute;
-  margin-top: 46px;
 }

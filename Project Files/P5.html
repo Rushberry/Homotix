@@ -1,0 +1,7 @@
+<form method="POST" action="https://script.google.com/macros/s/AKfycbz464FDDrRjvGSTSPLALd8NWmkitdin3bWN7d5KuJk1YiVw8KMbTgKLjLKQi827bqps/exec" name="Registration Form (Homotix)" id="registration">
+    <input type="text" name="Full Name" placeholder="Full Name" oninput="capitalizeFirstLetter(this)" required>
+    <input type="text" name="Mobile Number (+880)" placeholder="Mobile Number (+880)" pattern="[0-9]{11}" maxlength="11" oninput="validateMobileNumber(this)" required>
+    <input type="text" name="Education Qualification (BHMS/DHMS)" placeholder="Education Qualification (BHMS/DHMS)" oninput="validateEducation(this)" required>
+    <button type="submit" id="send">Send </button>
+<script src="script/P5.js"></script>
+</form>
