@@ -56,4 +56,3 @@ document.getElementById("registration").addEventListener("submit", function (eve
             });
     }
 });
-
