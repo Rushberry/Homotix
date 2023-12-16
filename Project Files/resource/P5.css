@@ -76,12 +76,35 @@ button{
 }
 
 svg{
-    margin-top: 40px;
-    height: 516px; 
-    width: 520px;
+    margin-top: 130px;
+    height: 596px; 
+    width: 600px;
     
 }
 
 .successful{
     text-align: center;
+}
+
+.bh-img{
+  width: 900px;
+}
+
+.bkash{
+  margin-top: 150px;
+}
+
+button{
+  background-color: #e3106e;
+  border: none;
+  border-radius: 90px;
+  height: 150px;
+  Width: 850px;
+  margin-top: 14%;
+  margin-bottom: 0px;
+  color: white;
+  text-decoration: none;
+  font-size: 50px;
+  font-family: "Montserrat";
+  font-weight: bold;
 }
