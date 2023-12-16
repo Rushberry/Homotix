@@ -74,3 +74,14 @@ button{
 .space{
     margin-top: 10px;
 }
+
+svg{
+    margin-top: 40px;
+    height: 516px; 
+    width: 520px;
+    
+}
+
+.successful{
+    text-align: center;
+}
