@@ -37,7 +37,7 @@ button{
   border-radius: 90px;
   height: 150px;
   Width: 850px;
-  margin-top: 23.5%;
+  margin-top: 44.5%;
   margin-bottom: 0px;
   color: white;
   text-decoration: none;
@@ -47,12 +47,12 @@ button{
 }
 
 .regis{
-    font-size: 82px;
-    font-weight: 900;
-    text-align: left;
-    margin-left: 70px;
-    margin-top: 250px;
-    margin-bottom: 20px;
+  font-size: 122px;
+  font-weight: 900;
+  text-align: left;
+  margin-left: 70px;
+  margin-top: 80px;
+  margin-bottom: 0px;
 }
 
 .para{
@@ -114,4 +114,21 @@ input {
   font-weight: 500;
   margin-top: 45px;
   position: absolute;
+}
+
+.alw{
+  font-size: 50px;
+  margin-top: 55px;
+  text-align: left;
+  position: absolute;
+  width: 800px;
+  margin-bottom: 50px;
+}
+
+.ins{
+  font-size: 122px;
+  font-weight: 900;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 0px;
 }
