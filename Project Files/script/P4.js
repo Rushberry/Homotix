@@ -28,7 +28,7 @@ document.getElementById("registration").addEventListener("submit", function (eve
 
     const form = event.target;
 
-    const educationInput = form.querySelector("[name='Education Qualification (BHMS/DHMS)']");
+    const educationInput = form.querySelector("[name='Educational Qualification (BHMS/DHMS)']");
     const mobileNumberInput = form.querySelector("[name='Mobile Number (+880)']");
 
     validateEducation(educationInput);
@@ -44,7 +44,7 @@ document.getElementById("registration").addEventListener("submit", function (eve
             .then(response => response.json())
             .then(data => {
                 if (data.result === "success") {
-                    window.location.href = "P1.html";
+                    window.location.href = "P5.html";
                 } else {
                     alert("Submission failed. Please check your data and try again.");
                     form.reset(); 
@@ -56,3 +56,4 @@ document.getElementById("registration").addEventListener("submit", function (eve
             });
     }
 });
+
