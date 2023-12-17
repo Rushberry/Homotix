@@ -35,11 +35,13 @@ const chatInput = document.querySelector("#chat-input");
       const response = await (await fetch(API_URL, requestOptions)).json();
       const responseData = response.choices[0].text.trim();
       const chatResponse = responseData.replace("undefined", "");
-      pElement.textContent = chatResponse;
+      pElement.innerHTML = `<div class='outp'>${chatResponse}</div>`;
     } catch (error) {
       pElement.classList.add("error");
       pElement.textContent = "Oops! Something went wrong while retrieving the response. Please try again.";
     }
+
+
 
     incomingChatDiv.appendChild(pElement);
     chatContainer.scrollTo(0, chatContainer.scrollHeight);
