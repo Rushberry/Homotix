@@ -30,22 +30,6 @@ body{
   color: #4caf50;
 }
 
-
-button{
-  background-color: #4caf50;
-  border: none;
-  border-radius: 90px;
-  height: 150px;
-  Width: 850px;
-  margin-top: 44.5%;
-  margin-bottom: 0px;
-  color: white;
-  text-decoration: none;
-  font-size: 50px;
-  font-family: "Montserrat";
-  font-weight: bold;
-}
-
 .regis{
   font-size: 122px;
   font-weight: 900;
