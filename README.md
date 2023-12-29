@@ -11,7 +11,7 @@
 > Phone:[Payment Gateway](+880 1930196241)
 
 **Language Models Used**
-> Text-davanci-003 [P6](https://github.com/Rushberry/Homotix/blob/main/Project%20Files/P6.html)
-> Genemi [P8](https://github.com/Rushberry/Homotix/blob/main/Project%20Files/Text%20Davinci%20003/P1.html)
+>  [Text Davanci 003](https://github.com/Rushberry/Homotix/blob/main/Project%20Files/P6.html)
+>  [Genemi](https://github.com/Rushberry/Homotix/blob/main/Project%20Files/Text%20Davinci%20003/P1.html)
 
 > © Copyright All Rights are preserved by *Rushberry Ltd.*
