@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
 
-const API_KEY = "AIzaSyAExcUDXc4uXtVcAsI28yZ2qUMuZcpH5s0";
+const API_KEY = "AIzaSyAIzgfAefuMMEcdxdTsVO9v9sZFHBOmOPc";
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 async function generateText() {
@@ -31,6 +31,7 @@ async function generateText() {
     document.getElementById("generatedText").innerHTML = `<p class="user">${userPrompt}</p><p class="outp">${text}</p>`;
   } catch (error) {
     console.error("Error generating text:", error);
+    console.log(error)
   } 
  
   
@@ -45,10 +46,3 @@ document.getElementById("userPrompt").addEventListener("keyup", function (event)
   }
 });
 
-function bn() {
-  window.location.href = "P7.html";
-}
-
-function en() {
-  window.location.href = "P6.html";
-}

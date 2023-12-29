@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="resource/P6.css">
+        <!--Credits-->
+        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="homo">
+              HOMOTIX
+            </h1>
+            <span class="powered">
+              AI powered 
+              <span class="pathy">
+                Homeopathy
+              </span>
+            </span></br>
+            <button class="soft">
+                <span class="en" onclick="en()">English</span> <span class="aro"><svg xmlns="http://www.w3.org/2000/svg" height="46" width="55" viewBox="0 0 448 512"><path fill="#4caf50" d="M438.6 150.6c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.7 96 32 96C14.3 96 0 110.3 0 128s14.3 32 32 32l306.7 0-41.4 41.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96zm-333.3 352c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 416 416 416c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0 41.4-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96z"/></svg></span> <span class="bn" onclick="bn()">Bangla</span></div>
+            </button><br>
+            <div class="chat-container" id="generatedText"></div><br>
+            <div class="input-container">
+              <input class="syn" type="text" id="userPrompt" placeholder="Enter any symptom"  maxlength="25">
+              <button id="generateButton" class="send"><svg class="btn" xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><path fill="#ffffff" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"/></svg></button>
+            </div>
+    </body>
+    <script type="module" src="script/P6.js"></script>
+    <script src="script/rdr.js"></script>
+</html>
