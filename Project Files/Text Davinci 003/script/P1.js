@@ -90,9 +90,9 @@ const chatInput = document.querySelector("#chat-input");
   });
 
   function bn() {
-    window.location.href = "P7.html";
+    window.location.href = "P2.html";
   } 
 
   function en() {
-    window.location.href = "P6.html";
+    window.location.href = "P1.html";
   } 
