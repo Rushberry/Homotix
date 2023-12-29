@@ -12,6 +12,6 @@
 
 **Language Models Used**
 > Text-davanci-003 [P6](https://github.com/Rushberry/Homotix/blob/main/Project%20Files/P6.html)
-> Genemi [P8](https://github.com/Rushberry/Homotix/blob/main/Project%20Files/Text Davinci 003/P1.html)
+> Genemi [P8](https://github.com/Rushberry/Homotix/blob/main/Project%20Files/Text%20Davinci%20003/P1.html)
 
 > © Copyright All Rights are preserved by *Rushberry Ltd.*
