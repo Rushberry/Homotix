@@ -151,3 +151,18 @@ p {
   padding-bottom: 0px;
   padding-top: 0px;
 }
+
+.ext{
+  height: 100px;
+  width: 100px;
+  margin-right: 25px;
+  border: 4px #4caf50 solid;
+  border-radius: 30px;
+  background: none;
+  margin-bottom: 5px;
+  margin-top: -10px;
+}
+
+.ext-s{
+  height: 40px;
+}
