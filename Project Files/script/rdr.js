@@ -40,3 +40,11 @@ window.location.href = "P8.html";
 function longbn() {
 window.location.href = "P9.html";
 }
+
+function shorten() {
+window.location.href = "P6.html";
+}
+
+function shortbn() {
+window.location.href = "P7.html";
+}
