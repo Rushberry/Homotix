@@ -72,24 +72,22 @@ button{
   font-family: "Montserrat";
   font-weight: bold;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 
 
-.loading {
-  width: 40px;
-  aspect-ratio: 2;
-  --_g: no-repeat radial-gradient(circle closest-side,#fff 90%,#0000);
-  background: 
-    var(--_g) 0%   50%,
-    var(--_g) 50%  50%,
-    var(--_g) 100% 50%;
-  background-size: calc(100%/3) 50%;
-  animation: l3 1s infinite linear;
+.loader {
+  width: 30px; 
+  height: 30px; 
+  border-radius: 50%;
+  margin-left: 50%;
+  animation: l5 1s infinite linear alternate;
+  justify-content: center;
 }
-@keyframes l3 {
-    20%{background-position:0%   0%, 50%  50%,100%  50%}
-    40%{background-position:0% 100%, 50%   0%,100%  50%}
-    60%{background-position:0%  50%, 50% 100%,100%   0%}
-    80%{background-position:0%  50%, 50%  50%,100% 100%}
+
+@keyframes l5 {
+  0% { box-shadow: 40px 0 #fff, -40px 0 #fff2; background: #fff; }
+  33% { box-shadow: 40px 0 #fff, -40px 0 #fff2; background: #fff2; }
+  66% { box-shadow: 40px 0 #fff2, -40px 0 #fff; background: #fff2; }
+  100% { box-shadow: 40px 0 #fff2, -40px 0 #fff; background: #fff; }
 }
