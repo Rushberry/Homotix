@@ -7,6 +7,7 @@
 > [Registration Data (Homotix)](https://docs.google.com/spreadsheets/d/10OjGls5JIPyG3wcPgRqWQ5lrnM35HcOzd3lrZ_HmxyU/edit?usp=sharing)
 
 > Email:[I am Rushan](developer.homotix@gmail.com)
+> Namecheap:[PeYJvxS-.pH2e2H](info.rushberry@gmail.com)
 
 > Phone:[Payment Gateway](+880 1930196241)
 
