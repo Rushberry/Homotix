@@ -1,39 +1,23 @@
 <!Doctype html>
 <html>
-  <head>
-  <link rel="stylesheet" href="App/Intro/resource/app.css">
-  </head>
   <body>
-    <h1 class="arabic">
-      ٱلسَّلَامُ عَلَيْكُمْ
-    </h1>
-    <h1 class="Salam">
-      As Salamu Alaikum
-    </h1>
-    <div class="container">
-    <h1 class="welcome">
-      Welcome To
-    </h1>  
-    <h1 class="homo">
-      HOMOTIX
-    </h1>
-    <span class="powered">
-      AI powered 
-      <span class="pathy">
-        Homeopathy
-      </span>
-    </span></br>
-    <span class="ltd">
-      By Rushberry Ltd.
-    </span></br>
-    <div>
-    <footer class="bottom">
-      <a href="P2.html">
-        <button><div class="loader">
-        </div></button>
-      </a>
-  </footer>
-  <script src="App/Intro/script/rdr-s.js"></script>
-  <script src="App/Intro/script/inva.js"></script>
+  <script>
+  /// Redirecting to app... ///
+    setTimeout(function() {
+    window.location.href = 'App/Homotix (AI)/P6.html';
+    }, 1500);
+  
+  /// inva.js ///
+  function isLaptop() {
+    return window.innerWidth > 1024;
+  }
+
+  function redirectIfLaptop() {
+      if (isLaptop()) {
+          window.location.href = '404';
+      }
+  }
+  window.onload = redirectIfLaptop;
+  </script>
   </body>
 </html>
