@@ -45,4 +45,3 @@ document.getElementById("userPrompt").addEventListener("keyup", function (event)
     generateText();
   }
 });
-

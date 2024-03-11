@@ -37,7 +37,7 @@ button{
   border-radius: 90px;
   height: 150px;
   Width: 850px;
-  margin-top: 44.5%;
+  margin-top: 63.5%;
   margin-bottom: 0px;
   color: white;
   text-decoration: none;
@@ -115,19 +115,21 @@ input {
   position: absolute;
 }
 
-.alw{
-  font-size: 50px;
-  margin-top: 55px;
-  text-align: left;
-  position: absolute;
-  width: 800px;
-  margin-bottom: 50px;
+
+.check {
+  width: 42px;
+  height: 42px;
+  accent-color: #4caf50;
+  margin-top: 56px;
+  margin-left: 40px;
 }
 
-.ins{
-  font-size: 122px;
-  font-weight: 900;
-  text-align: left;
-  margin-top: 30px;
-  margin-bottom: 0px;
+.margin-m {
+  position: absolute;
+  margin-top: 46px;
+  margin-left: 100px;
+}
+
+.colour-l {
+  color: #4caf50;
 }

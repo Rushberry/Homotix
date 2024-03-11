@@ -30,11 +30,12 @@ document.getElementById("registration").addEventListener("submit", function (eve
 
     const educationInput = form.querySelector("[name='Educational Qualification (BHMS/DHMS)']");
     const mobileNumberInput = form.querySelector("[name='Mobile Number (+880)']");
+    const checkbox = document.getElementById('check');
 
     validateEducation(educationInput);
     validateMobileNumber(mobileNumberInput);
 
-    if (form.checkValidity()) {
+    if (form.checkValidity() && checkAgreement()) {
         const formData = new FormData(form);
 
         fetch(form.action, {
@@ -44,7 +45,7 @@ document.getElementById("registration").addEventListener("submit", function (eve
             .then(response => response.json())
             .then(data => {
                 if (data.result === "success") {
-                    window.location.href = "P5.html";
+                    window.location.href = "payment.html";
                 } else {
                     alert("Submission failed. Please check your data and try again.");
                     form.reset(); 
@@ -56,3 +57,14 @@ document.getElementById("registration").addEventListener("submit", function (eve
             });
     }
 });
+
+function checkAgreement() {
+    var checkbox = document.getElementById('check');
+
+    if (!checkbox.checked) {
+      alert('Please agree to the Terms & Conditions.');
+      return false;
+    }
+
+    return true;
+}
