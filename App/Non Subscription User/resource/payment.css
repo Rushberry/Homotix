@@ -1,0 +1,56 @@
+@import url(https://db.onlinewebfonts.com/c/590d26872afc308d02689176a1985e6c?family=Kare+W01+Regular);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
+
+body{
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.container{
+  margin-top: 100px;
+}
+
+
+.homo{
+  color: #4caf50;
+  margin-top: -40px;
+  font-family: "Kare W01 Regular";
+  font-size: 170px;
+  letter-spacing: 1px;
+  margin-bottom: -15px;
+}
+
+.powered{
+  font-size: 60px;
+}
+
+.pathy{
+  color: #4caf50;
+}
+
+
+button{
+  border: none;
+  border-radius: 90px;
+  height: 130px;
+  Width: 850px;
+  margin-top: 5.5%;
+  margin-bottom: -2px;
+  color: white;
+  text-decoration: none;
+  font-size: 50px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+
+}
+
+button img{
+  height: 120px;
+  width: 120px;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+}
