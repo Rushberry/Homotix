@@ -54,6 +54,9 @@ body{
   border-radius: 90px;
   color: white;
   margin-right: 50px;
+  position: absolute;
+  margin-left: -312px;
+  margin-top: -33px;
 }
 
 .bn{
@@ -63,6 +66,9 @@ body{
   color: white;
   border-radius: 90px;
   margin-left: 50px;
+  position: absolute;
+  margin-left: 67px;
+  margin-top: -33px;
 }
 
 .chat-container {
