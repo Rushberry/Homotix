@@ -54,6 +54,10 @@ body{
   padding: 33px;
   border-radius: 90px;
   color: white;
+  margin-right: 50px;
+  position: absolute;
+  margin-left: -312px;
+  margin-top: -33px;
 }
 
 .bn{
@@ -62,7 +66,12 @@ body{
   padding: 33px;
   color: white;
   border-radius: 90px;
+  margin-left: 50px;
+  position: absolute;
+  margin-left: 67px;
+  margin-top: -33px;
 }
+
 
 .chat-container {
   border: #4caf50 4px solid;
