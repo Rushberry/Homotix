@@ -6,7 +6,7 @@ const genAI = new GoogleGenerativeAI(API_KEY);
 async function generateText() {
   const userPrompt = document.getElementById("userPrompt").value.trim();
   const prompt = `:prompt-->
-  Provide brief, concise answers with 5-7 top homeopathy medicines comma-separated format without additional text or formatting.; verify symptom validity, correct spelling errors, offer medicine for related diseases if applicable if not then return "It is not a valid symptom. Sorry try again.". Remember cancer and tumor are valid.
+  Provide brief, concise answers with 5 top homeopathy medicines comma-separated format without additional text or formatting.; verify symptom validity, correct spelling errors, offer medicine for related diseases if applicable if not then return "It is not a valid symptom. Sorry try again.". Remember cancer and tumor are valid.
   [Now Answer the following symptom] -------${userPrompt}`;
 
   const model = genAI.getGenerativeModel({ model: "gemini-pro" });
