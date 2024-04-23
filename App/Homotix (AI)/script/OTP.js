@@ -22,7 +22,7 @@ const onetime = document.getElementById('onetime');
             localStorage.setItem('usedPasswords', JSON.stringify(usedPasswords));
 
             // Set the expiration time for the session
-            const expirationTime = new Date().getTime() + (300 * 1000); // 120 seconds from now
+            const expirationTime = new Date().getTime() + (2592000 * 1000); // 120 seconds from now
             localStorage.setItem('expirationTime', expirationTime);
 
             // Set the value of the input field to the valid OTP
