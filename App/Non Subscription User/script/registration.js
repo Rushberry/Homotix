@@ -45,7 +45,7 @@ document.getElementById("registration").addEventListener("submit", function (eve
             .then(response => response.json())
             .then(data => {
                 if (data.result === "success") {
-                    window.location.href = "payment.html";
+                    window.location.href = "success.html";
                 } else {
                     alert("Submission failed. Please check your data and try again.");
                     form.reset(); 
