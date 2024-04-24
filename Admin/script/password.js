@@ -2,7 +2,7 @@ function authenticate() {
     var password = document.getElementById('password').value;
     if (password === 'Ana Rushan Ibn Anwar') {
         localStorage.setItem('authenticated', 'true');
-        window.location.href = '../administration.html';
+        window.location.href = '../admin';
     } else {
         alert('Incorrect password. Please try again.');
     }

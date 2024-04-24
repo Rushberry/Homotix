@@ -1,3 +1,3 @@
 if (!localStorage.getItem('authenticated')) {
-    window.location.href = 'Administration/p-admin.html';
+    window.location.href = 'Admin/password';
 }
