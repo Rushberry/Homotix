@@ -5,28 +5,31 @@
   <link rel="manifest" href="/manifest.json">
   <title>Homotix</title>
   <style>
-    .loader {
-      width: 60px; /* Increased width */
-      height: 60px; /* Increased height */
-      border-radius: 50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      animation: l5 1s infinite linear alternate;
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    @keyframes l5 {
-      0% { box-shadow: 80px 0 #fff, -80px 0 #4caf50; background: #fff; }
-      33% { box-shadow: 80px 0 #fff, -80px 0 #4caf50; background: #4caf50; }
-      66% { box-shadow: 80px 0 #4caf50, -80px 0 #fff; background: #4caf50; }
-      100% { box-shadow: 80px 0 #4caf50, -80px 0 #fff; background: #fff; }
+    .gif-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-  </style>
+
+    .gif {
+        max-width: 100%;
+        max-height: 100%;
+    }
+</style>
 </head>
 <body>
-  <div class="loader"></div>
-  <script>
+<div class="gif-container">
+    <img src="/Mobile/Homotix.gif" class="gif" alt="Homotix">
+</div>
+<script>
     /// Redirecting to app... ///
     setTimeout(function() {
     window.location.href = 'App/Homotix (AI)/P6.html';
@@ -43,8 +46,8 @@
       }
     }
     window.onload = redirectIfLaptop;
-  </script>
-  <script>
+</script>
+<script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/serviceworker.js')
