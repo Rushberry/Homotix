@@ -3,6 +3,8 @@
     <head>
         <link rel="stylesheet" href="resource/P6.css">
         <link rel="icon" href="resource/Homotix.png" type="image/png">
+        <link rel="manifest" href="https://chat.homotix.app/manifest.json">
+        
         <title>Homotix</title>
         <!--Credits-->
         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
@@ -31,4 +33,17 @@
     <script src="script/verify.js"></script>
     <script src="script/rdr.js"></script>
     <script src="script/inva.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('https://chat.homotix.app/serviceworker.js')
+            .then(registration => {
+              console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch(error => {
+              console.error('Service Worker registration failed:', error);
+            });
+        });
+      }
+    </script>
 </html>

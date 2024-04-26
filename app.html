@@ -2,7 +2,7 @@
 <html>
 <head>
   <link rel="icon" href="Homotix.png" type="image/png">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="https://chat.homotix.app/manifest.json">
   <title>Homotix</title>
   <style>
     .loader {
@@ -47,7 +47,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/serviceworker.js')
+        navigator.serviceWorker.register('https://chat.homotix.app/serviceworker.js')
           .then(registration => {
             console.log('Service Worker registered with scope:', registration.scope);
           })
