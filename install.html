@@ -4,7 +4,7 @@
     <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--->
     <link rel="stylesheet" href="Admin/resource/admin.css" />
     <link rel="icon" href="Homotix.png" type="image/png" />
-    <link rel="manifest" href="https://chat.homotix.app/manifest.json" />
+    <link rel="manifest" href="/manifest.json" />
     <title>Homotix</title>
     <style>
       #data {
@@ -24,7 +24,7 @@
       <br />
     </div>
     <div class="discover">
-      <div id="data" class="common" style="display: none">
+      <div id="data" class="common">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path
             fill="#ffffff"
@@ -36,41 +36,33 @@
     </div>
   </body>
   <script>
-    window.addEventListener('load', () => {
-      const dataDiv = document.getElementById('data');
-      if ('beforeinstallprompt' in window) {
-        window.addEventListener('beforeinstallprompt', (event) => {
-          event.preventDefault();
-          dataDiv.style.display = 'flex'; // Show the install button
-          dataDiv.addEventListener('click', () => {
-            event.prompt(); // Show the install prompt
-            event.userChoice.then((choiceResult) => {
-              if (choiceResult.outcome === 'accepted') {
-                console.log('User accepted the install prompt');
-              } else {
-                console.log('User dismissed the install prompt');
-              }
-            });
-          });
-        });
-      } else {
-        // If PWA cannot be installed, hide the install button
-        dataDiv.style.display = 'none';
-      }
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+        deferredPrompt = e;
+    });
+
+    const installApp = document.getElementById('data');
+    installApp.addEventListener('click', async () => {
+        if (deferredPrompt !== null) {
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+                deferredPrompt = null;
+            }
+        }
     });
   </script>
   <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker
-          .register('https://chat.homotix.app/serviceworker.js')
-          .then((registration) => {
-            console.log('Service Worker registered with scope:', registration.scope);
-          })
-          .catch((error) => {
-            console.error('Service Worker registration failed:', error);
-          });
-      });
-    }
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/serviceworker.js')
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(error => {
+          console.error('Service Worker registration failed:', error);
+        });
+    });
+  }
   </script>
 </html>
