@@ -35,38 +35,38 @@
 
     </body>
     <script>
-      
       window.addEventListener('load', () => {
-        const dataDiv = document.getElementById('data');
-        if ('beforeinstallprompt' in window) {
-          let deferredPrompt;
+            const dataDiv = document.getElementById('data');
+            if ('beforeinstallprompt' in window) {
+                let deferredPrompt;
 
-          window.addEventListener('beforeinstallprompt', (event) => {
-            event.preventDefault();
-            deferredPrompt = event;
-          });
+                window.addEventListener('beforeinstallprompt', (event) => {
+                    event.preventDefault();
+                    deferredPrompt = event;
+                    dataDiv.style.display = 'block'; // Make sure the install button is visible
+                });
 
-          dataDiv.addEventListener('click', () => {
-            if (deferredPrompt) {
-              deferredPrompt.prompt();
-              deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                  console.log('User accepted the install prompt');
-                } else {
-                  console.log('User dismissed the install prompt');
-                }
-                deferredPrompt = null;
-              });
+                dataDiv.addEventListener('click', () => {
+                    if (deferredPrompt) {
+                        deferredPrompt.prompt();
+                        deferredPrompt.userChoice.then((choiceResult) => {
+                            if (choiceResult.outcome === 'accepted') {
+                                console.log('User accepted the install prompt');
+                            } else {
+                                console.log('User dismissed the install prompt');
+                            }
+                            deferredPrompt = null;
+                        });
+                    }
+                });
+            } else {
+                // If PWA cannot be installed, hide the install button
+                dataDiv.style.display = 'none';
             }
-          });
-        } else {
-          // If PWA cannot be installed, hide the install button
-          dataDiv.style.display = 'clear';
-        }
-      });
+        });
+</script>
 
-
-
+<script>
 if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('https://chat.homotix.app/serviceworker.js')
