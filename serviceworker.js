@@ -1,7 +1,6 @@
 const CACHE_NAME = 'homotix-cache-v1';
 const urlsToCache = [
   '/offline.html',
-  '/Mobile/offline.css',
   '/Mobile/Homotix.gif',
   '/Mobile/H512.png',
   '/Mobile/H192.png',
