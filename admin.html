@@ -37,7 +37,6 @@
     <script>
      let otpList = [];
 let usedOTPIndexes = [];
-let totalOTPs = 0;
 
 function fetchOTPList() {
     fetch('https://raw.githubusercontent.com/Rushberry/homotix.otp/main/password.txt')
@@ -45,7 +44,6 @@ function fetchOTPList() {
     .then(data => {
         // Splitting the content of the text file by new line
         otpList = data.trim().split('\n');
-        totalOTPs = otpList.length;
     })
     .catch(error => {
         console.error('Failed to fetch OTPs: ', error);
@@ -75,10 +73,6 @@ function copyOTP() {
     navigator.clipboard.writeText(otpMessage)
     .then(() => {
         alert('OTP copied to clipboard: ' + otp);
-        // Check if all OTPs are used
-        if (usedOTPIndexes.length === totalOTPs) {
-            alert('All OTPs are used up.');
-        }
     })
     .catch(err => {
         console.error('Failed to copy OTP: ', err);
