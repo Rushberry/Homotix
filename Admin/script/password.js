@@ -1,6 +1,6 @@
 function authenticate() {
     var password = document.getElementById('password').value;
-    if (password === 'Ana Rushan Ibn Anwar') {
+    if (password === 'Alhamdulillah') {
         localStorage.setItem('authenticated', 'true');
         window.location.href = '../admin';
     } else {
