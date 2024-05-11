@@ -34,50 +34,32 @@
         </div>
 
     </body>
-    <script>
-     let otpList = [];
-let usedOTPIndexes = [];
-
-function fetchOTPList() {
-    fetch('https://raw.githubusercontent.com/Rushberry/homotix.otp/main/password.txt')
-    .then(response => response.text())
-    .then(data => {
-        // Splitting the content of the text file by new line
-        otpList = data.trim().split('\n');
-    })
-    .catch(error => {
-        console.error('Failed to fetch OTPs: ', error);
-    });
-}
-
-function getRandomUnusedOTPIndex() {
-    const unusedIndexes = otpList.map((_, index) => index).filter(index => !usedOTPIndexes.includes(index));
-    if (unusedIndexes.length === 0) {
-        return -1; // All OTPs are used
-    }
-    const randomIndex = unusedIndexes[Math.floor(Math.random() * unusedIndexes.length)];
-    usedOTPIndexes.push(randomIndex);
-    return randomIndex;
-}
-
-function copyOTP() {
-    const randomIndex = getRandomUnusedOTPIndex();
-    if (randomIndex === -1) {
-        alert('All OTPs are used up.');
-        return;
-    }
-    const otp = otpList[randomIndex];
-    const otpMessage = `Homotix OTP: ${otp}\n\nUse this one-time password to verify your account on Homotix.\n\nIf you didn't request this code, please ignore this message.\n\nFor any assistance, visit our website at homotix.app or contact us at developer.homotix@gmail.com.`;
-    
-    // Copying the OTP message to clipboard
-    navigator.clipboard.writeText(otpMessage)
-    .then(() => {
-        alert('OTP copied to clipboard: ' + otp);
-    })
-    .catch(err => {
-        console.error('Failed to copy OTP: ', err);
-    });
-}
-    </script>
+    <script>function copyOTP() {
+        fetch('https://raw.githubusercontent.com/Rushberry/homotix.otp/main/password.txt')
+        .then(response => response.text())
+        .then(data => {
+            // Splitting the content of the text file by new line
+            const otpList = data.trim().split('\n');
+            
+            // Randomly selecting an OTP from the list
+            const randomIndex = Math.floor(Math.random() * otpList.length);
+            const otp = otpList[randomIndex];
+            
+            // Replacing the placeholder with the selected OTP
+            const otpMessage = `Homotix OTP: ${otp}\n\nUse this one-time password to verify your account on Homotix.\n\nIf you didn't request this code, please ignore this message.\n\nFor any assistance, visit our website at homotix.app or contact us at developer.homotix@gmail.com.`;
+            
+            // Copying the OTP message to clipboard
+            navigator.clipboard.writeText(otpMessage)
+            .then(() => {
+                alert('OTP copied to clipboard: ' + otp);
+            })
+            .catch(err => {
+                console.error('Failed to copy OTP: ', err);
+            });
+        })
+        .catch(error => {
+            console.error('Failed to fetch OTPs: ', error);
+        });
+    }</script>
     <script src="Admin/script/admin.js"></script>
 </html>
