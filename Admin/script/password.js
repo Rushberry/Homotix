@@ -1,10 +1,10 @@
 function authenticate() {
     var password = document.getElementById('password').value;
     if (password === 'Alhamdulillah') {
-        localStorage.setItem('authenticated', 'true');
+        localStorage.setItem('authenticated', 'admin');
         window.location.href = '../admin';
     } else if (password === 'HXATAMIM') {
-        localStorage.setItem('authenticated', 'true');
+        localStorage.setItem('authenticated', 'agend');
         window.location.href = '../agend';
     } else {
         alert('Incorrect password. Please try again.');
