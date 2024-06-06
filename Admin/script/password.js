@@ -4,8 +4,8 @@ function authenticate() {
         localStorage.setItem('authenticated', 'admin');
         window.location.href = '../admin';
     } else if (password === 'HXATAMIM') {
-        localStorage.setItem('authenticated', 'agend');
-        window.location.href = '../agend';
+        localStorage.setItem('authenticated', 'agent');
+        window.location.href = '../agent';
     } else {
         alert('Incorrect password. Please try again.');
     }

@@ -4,6 +4,10 @@ if (authStatus !== 'admin') {
     if (authStatus === 'agent') {
         window.location.href = '../agent';
     } else {
-        window.location.href = '/Admin/password';
+        window.location.href = '../password';
     }
+}
+
+if (localStorage.getItem('authenticated') !== 'agent') {
+  window.location.href = '../password';
 }
