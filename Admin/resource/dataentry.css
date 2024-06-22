@@ -41,7 +41,7 @@ button{
   border-radius: 90px;
   height: 150px;
   Width: 850px;
-  margin-top: 1451px;
+  margin-top: 71px;
   margin-bottom: 50px;
   color: white;
   text-decoration: none;
@@ -152,3 +152,22 @@ input {
 .colour-l {
   color: #4caf50;
 }
+
+.loader {
+  width: 40px; /* Width to fit within the button */
+  height: 40px; /* Height to fit within the button */
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative; /* For better control of child elements */
+  animation: l5 1s infinite linear alternate;
+}
+
+@keyframes l5 {
+  0% { box-shadow: 50px 0 #4caf50, -50px 0 #fff; background: #4caf50; }
+  33% { box-shadow: 50px 0 #4caf50, -50px 0 #fff; background: #fff; }
+  66% { box-shadow: 50px 0 #fff, -50px 0 #4caf50; background: #fff; }
+  100% { box-shadow: 50px 0 #fff, -50px 0 #4caf50; background: #4caf50; }
+}
+
+

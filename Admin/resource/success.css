@@ -1,0 +1,153 @@
+@import url(https://db.onlinewebfonts.com/c/590d26872afc308d02689176a1985e6c?family=Kare+W01+Regular);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
+
+body{
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+
+.container{
+  margin-top: 100px;
+}
+
+
+.homo{
+  color: #4caf50;
+  margin-top: -40px;
+  font-family: "Kare W01 Regular";
+  font-size: 170px;
+  letter-spacing: 1px;
+  margin-bottom: -15px;
+}
+
+.powered{
+  font-size: 60px;
+}
+
+.pathy{
+  color: #4caf50;
+}
+
+.regis{
+  font-size: 122px;
+  font-weight: 900;
+  text-align: left;
+  margin-left: 70px;
+  margin-top: 80px;
+  margin-bottom: 0px;
+}
+
+.para{
+    font-size: 50px;
+    text-align: left;
+    margin-left: 72px;
+    width: 800px;
+}
+
+.boldp{
+    font-weight: bold;
+}
+
+.colour{
+    color:#4caf50;
+    font-weight: bold;
+}
+
+.space{
+    margin-top: 10px;
+}
+
+.sh1, .sh2 {
+  border: none;
+  border-radius: 50%;
+  margin: auto;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.sh1 {
+  background: #e4fee4;
+  height: 600px; 
+  width: 600px;
+}
+
+.sh2 {
+  background: #c7fec8;
+  height: 500px; 
+  width: 500px;
+}
+
+svg {
+  height: 396px; 
+  width: 400px;
+  margin: auto;
+  background: #fff;
+  border: none;
+  border-radius: 80%;
+}
+
+.successful {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  margin-top: 90px; 
+  width: 100%;
+}
+
+.space{
+  margin-top: 300px;
+}
+
+.glow{
+  height: 120px;
+  width: 120px;
+}
+
+.s1{
+  font-size: 90px;
+  font-weight: 600;
+  color: #8ae07c;
+  margin-bottom: 0px;
+}
+
+.s2{
+  font-size: 50px;
+  margin-top: 2px;
+  font-weight: 600;
+}
+
+.re{
+  font-size: 50px;
+}
+
+.regis{
+    font-size: 122px;
+    font-weight: 900;
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+
+  .para{
+    font-size: 50px;
+    text-align: justify;
+    margin-left: 72px;
+    width: 800px;
+}
+
+.fottor{
+    margin-bottom: 100px;
+}
+
+.strong{
+    font-weight: 700;
+}
+
+img{
+    width: 110%;
+    margin-left: -15px;
+}
