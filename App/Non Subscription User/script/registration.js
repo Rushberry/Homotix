@@ -38,6 +38,11 @@ document.getElementById("registration").addEventListener("submit", function (eve
     if (form.checkValidity() && checkAgreement()) {
         const formData = new FormData(form);
 
+        // Replace submit button text with loader
+        const submitButton = document.getElementById("send");
+        submitButton.innerHTML = '<div class="loader"></div>';
+        submitButton.disabled = true;
+
         fetch(form.action, {
             method: form.method,
             body: formData,
@@ -48,12 +53,17 @@ document.getElementById("registration").addEventListener("submit", function (eve
                     window.location.href = "success.html";
                 } else {
                     alert("Submission failed. Please check your data and try again.");
-                    form.reset(); 
+                    form.reset();
                 }
             })
             .catch(error => {
                 console.error("Error during form submission:", error);
                 alert("An error occurred. Please try again later.");
+            })
+            .finally(() => {
+                // Re-enable the submit button and revert text after submission attempt
+                submitButton.innerHTML = 'Submit Data';
+                submitButton.disabled = false;
             });
     }
 });

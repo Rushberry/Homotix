@@ -26,7 +26,7 @@ fetch('https://raw.githubusercontent.com/Rushberry/homotix.otp/main/password.txt
         localStorage.setItem('usedPasswords', JSON.stringify(usedPasswords));
 
         // Set the expiration time for the session
-        const expirationTime = new Date().getTime() + (2592300 * 1000); // 120 seconds from now
+        const expirationTime = new Date().getTime() + (2592300 * 1000); // 120 seconds from now // Here  * 1000 30days 5 minutes
         localStorage.setItem('expirationTime', expirationTime);
 
         // Set the value of the input field to the valid OTP
